@@ -261,7 +261,7 @@
   <h2><i class="bi bi-file-earmark-text"></i> Prestação de Contas - ADD</h2>
 
   <div class="header-actions">
-    <a class="back-btn" href="https://coec-epb.github.io/ADD_DECP">
+    <a class="back-btn" href="https://coec-epb.github.io/ADD_Leitura">
       <i class="bi bi-arrow-left"></i> Voltar para o calendário
     </a>
     <button class="logout-btn" onclick="logout()"><i class="bi bi-box-arrow-right"></i> Sair</button>
@@ -374,18 +374,18 @@
 
     <button id="btnSubmit">Enviar Registro</button>
 
-    <a class="dashboard-btn" href="https://coec-epb.github.io/ADD_DECP">
+    <a class="dashboard-btn" href="https://coec-epb.github.io/ADD_Leitura">
       <i class="bi bi-calendar3"></i> Voltar para o calendário
     </a>
 
     <p class="muted">Desenvolvido por Pedro Fillype – Grupo Energisa</p>
   </form>
 </div>
-<script src="https://coec-epb.github.io/LOGIN_DECP/auth.js"></script>
+<script src="https://coec-epb.github.io/Login-Leitura/auth.js"></script>
 <script>
 function logout() {
   localStorage.clear();
-  window.location.href = "https://coec-epb.github.io/LOGIN_DECP/";
+  window.location.href = "https://coec-epb.github.io/Login-Leitura/";
 }
 
 const MAP_POLOS = {
@@ -676,7 +676,7 @@ const matriculaSalva = user.matricula;
   }
 
   try {
-    const url = `https://add-decp.decpenergisa2026.workers.dev/colaborador?matricula=${encodeURIComponent(matriculaSalva)}`;
+    const url = `https://add-leitura.leituraepbenergisa.workers.dev/colaborador?matricula=${encodeURIComponent(matriculaSalva)}`;
     const resp = await authFetch(url);
     const json = await resp.json();
 
@@ -864,7 +864,7 @@ document.getElementById("addForm").addEventListener("submit", async (e) => {
 
     alert("✅ Registro enviado com sucesso.");
     setTimeout(() => {
-      window.location.href = "https://coec-epb.github.io/ADD_DECP";
+      window.location.href = "https://coec-epb.github.io/ADD_Leitura";
     }, 500);
 
   } catch (err) {
